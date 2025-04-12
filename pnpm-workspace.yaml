@@ -1,0 +1,6 @@
+packages:
+  - 'server/'
+  - 'shared/'
+  - 'client/'
+  - 'bot/'
+  - '!**dist/**'

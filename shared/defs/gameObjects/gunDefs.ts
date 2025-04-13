@@ -3353,4 +3353,64 @@ export const GunDefs: Record<string, GunDef> = {
             deploy: "stow_weapon_01",
         },
     },
+    // post-kong guns, from wiki
+    m134: {
+        name: "M134",
+        type: "gun",
+        quality: 1,
+        fireMode: "auto",
+        caseTiming: "shoot",
+        ammo: "762mm",
+        ammoSpawnCount: 200,
+        maxClip: 200,
+        maxReload: 200,
+        extendedClip: 250,
+        extendedReload: 250,
+        reloadTime: 8,
+        fireDelay: 0.055,
+        switchDelay: 0.9,
+        barrelLength: 4.8,
+        barrelOffset: 0,
+        recoilTime: 1e10,
+        moveSpread: 2,
+        shotSpread: 1,
+        bulletCount: 1,
+        bulletType: "bullet_m134", // supposed to be bullet_m134
+        headshotMult: 1.5,
+        speed: { equip: -3, attack: -6 }, // i think
+        lootImg: {
+            sprite: "loot-weapon-m134.img.png", // obv wrong
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.3, //????
+        },
+        // hmm
+        worldImg: {
+            // sprite: "gun-pkp-top-01.img",
+            sprite: "gun-m134-01.img",
+            scale: { x: 0.5, y: 0.5 },
+            tint: 0xffffff,
+            leftHandOffset: { x: 12.5, y: 0 },
+            recoil: 1.33,
+            // magImg: {
+            //     sprite: "gun-pkp-bot-01.img",
+            //     pos: { x: 0, y: -17.5 },
+            // },
+        },
+        // no clue
+        particle: {
+            shellScale: 1,
+            shellOffset: 0.5875,
+            shellReverse: true,
+        },
+        // no clue
+        sound: {
+            shoot: "pkp_01",
+            reload: "pkp_reload_01",
+            pickup: "gun_pickup_01",
+            empty: "empty_fire_02",
+            deploy: "pkp_switch_01",
+        },
+    },
 };

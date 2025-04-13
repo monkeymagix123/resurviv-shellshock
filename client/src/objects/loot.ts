@@ -112,6 +112,12 @@ export class Loot implements AbstractObject {
             this.sprite.scale.set(innerScale, innerScale);
             this.sprite.texture = PIXI.Texture.from(itemDef.lootImg?.sprite);
             this.sprite.tint = itemDef.lootImg?.tint;
+            if (itemDef.lootImg?.sprite.includes("m134")) {
+                this.sprite.texture = PIXI.Texture.from("../../public/img/loot/loot-weapon-m134.png");
+                this.sprite.scale.set(0.037, 0.037);
+                // this.sprite.scale.set(0.1);
+                // this.imgScale = 0.01;
+            }
             this.container.texture = itemDef.lootImg.border
                 ? PIXI.Texture.from(itemDef.lootImg.border)
                 : PIXI.Texture.EMPTY;
@@ -137,6 +143,8 @@ export class Loot implements AbstractObject {
             this.sprite.rotation = (itemDef as MeleeDef)?.lootImg?.rot
                 ? (itemDef as MeleeDef).lootImg.rot!
                 : 0;
+            
+            if (!itemDef.lootImg.sprite.includes("m134"))
             this.sprite.scale.x = (itemDef as MeleeDef).lootImg.mirror
                 ? -innerScale
                 : innerScale;

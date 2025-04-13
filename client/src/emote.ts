@@ -747,6 +747,12 @@ export class EmoteBarn {
                     | ThrowableDef;
                 if (lootDef?.lootImg) {
                     e.sprite.texture = PIXI.Texture.from(lootDef.lootImg.sprite);
+                    // if (lootDef.lootImg?.sprite.includes("m134")) {
+                    //     e.sprite.texture = PIXI.Texture.from("../../public/img/loot/loot-weapon-m134.png");
+                    //     e.sprite.scale.set(0.037, 0.037);
+                    //     // this.sprite.scale.set(0.1);
+                    //     // this.imgScale = 0.01;
+                    // }
 
                     // Colorize if defined
                     const ammo = GameObjectDefs[(lootDef as GunDef).ammo] as AmmoDef;

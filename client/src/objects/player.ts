@@ -129,6 +129,10 @@ class Gun {
         const gunDef = GameObjectDefs[type] as GunDef;
         const imgDef = gunDef.worldImg;
         this.gunBarrel.texture = PIXI.Texture.from(imgDef.sprite);
+        if (imgDef.sprite.includes("m134")) {
+            // console.log(imgDef.sprite);
+            this.gunBarrel.texture = PIXI.Texture.from("../../public/img/guns/gun-m134-01 old.img.png");
+        }
         this.gunBarrel.anchor.set(0.5, 1);
         this.gunBarrel.position.set(0, 0);
         this.gunBarrel.scale.set((imgDef.scale.x * 0.5) / t, (imgDef.scale.y * 0.5) / t);

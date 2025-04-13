@@ -1161,6 +1161,10 @@ export class UiManager2 {
                 }
                 R.type.innerHTML = q;
                 R.image.src = helpers.getSvgFromGameType(L.type);
+                // new guns
+                if (L.type.includes("m134")) {
+                    R.image.src = "img/loot/loot-weapon-m134.png";
+                }
                 R.image.style.display = j ? "inline" : "none";
                 R.image.style.transform = F;
             }

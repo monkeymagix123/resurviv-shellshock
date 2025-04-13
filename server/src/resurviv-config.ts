@@ -4,7 +4,8 @@ import type { ConfigType, DeepPartial } from "./config";
 const BACKPACK_LEVEL = 3;
 
 // change this to the region of the server
-export const THIS_REGION: "na" | "eu" | "local" = "local";
+// export const THIS_REGION: "na" | "eu" | "local" = "local";
+export const THIS_REGION: "na" | "eu" | "local" = "na";
 
 const serverDataConfig = {
     local: {},

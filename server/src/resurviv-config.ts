@@ -16,7 +16,7 @@ const serverDataConfig = {
         regions: {
             na: {
                 https: true,
-                address: "sus2.tailf587b3.ts.net/",
+                address: "sus2.tailf587b3.ts.net",
                 l10n: "index-north-america",
             },
             // eu: {

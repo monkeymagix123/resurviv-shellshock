@@ -685,7 +685,10 @@ export class LoadoutMenu {
                 displayName: objDef.name!,
                 category: objDef.type,
             };
-            const svg = helpers.getSvgFromGameType(currentNewItem.type);
+            let svg = helpers.getSvgFromGameType(currentNewItem.type);
+            if (currentNewItem.type.includes("m134")) {
+                svg = "img/loot/loot-weapon-m134.png"; 
+            }
             const imageUrl = `url(${svg})`;
             const transform = helpers.getCssTransformFromGameType(currentNewItem.type);
             setTimeout(() => {
@@ -1140,7 +1143,10 @@ export class LoadoutMenu {
                 "data-idx": i,
             });
 
-            const svg = helpers.getSvgFromGameType(item.type);
+            let svg = helpers.getSvgFromGameType(item.type);
+            if (item.type.includes("m134")) {
+                svg = "img/loot/loot-weapon-m134.png"; 
+            }
             const transform = helpers.getCssTransformFromGameType(item.type);
             const innerDiv = $("<div/>", {
                 class: "customize-item-image",

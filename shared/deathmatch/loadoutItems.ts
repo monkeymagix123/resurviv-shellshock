@@ -70,4 +70,6 @@ export const allowedGuns = [
 
     // post-kong
     "m134",
+    "pkm",
+    // "potato_cannon",
 ];

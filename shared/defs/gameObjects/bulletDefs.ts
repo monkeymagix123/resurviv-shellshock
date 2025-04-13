@@ -821,6 +821,19 @@ export const BaseDefs: Record<string, BulletDef> = {
         tracerWidth: 0.1,
         tracerLength: 0.9,
     },
+    bullet_pkm: {
+        type: "bullet",
+        damage: 15,
+        obstacleDamage: 30,
+        falloff: 0.9,
+        distance: 200,
+        speed: 130,
+        variance: 0, // ?????
+        shrapnel: false,
+        tracerColor: "762mm",
+        tracerWidth: 0.1,
+        tracerLength: 0.9,
+    },
 };
 
 const SkinDefs: Record<string, BulletDef> = {

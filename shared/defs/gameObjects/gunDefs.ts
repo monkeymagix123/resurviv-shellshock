@@ -3413,4 +3413,63 @@ export const GunDefs: Record<string, GunDef> = {
             deploy: "pkp_switch_01",
         },
     },
+    pkm: {
+        name: "PKM",
+        type: "gun",
+        quality: 1,
+        fireMode: "auto",
+        caseTiming: "shoot",
+        ammo: "762mm",
+        ammoSpawnCount: 200,
+        maxClip: 100,
+        maxReload: 100,
+        extendedClip: 200,
+        extendedReload: 200,
+        reloadTime: 6,
+        fireDelay: 0.1,
+        switchDelay: 0.75,
+        barrelLength: 3.6,
+        barrelOffset: 0,
+        recoilTime: 1e10,
+        moveSpread: 10,
+        shotSpread: 2.5,
+        bulletCount: 1,
+        bulletType: "bullet_pkm",
+        headshotMult: 2,
+        speed: { equip: 0, attack: -5 }, // i think
+        lootImg: {
+            sprite: "loot-weapon-pkm.img.png", // obv wrong
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.3, //????
+        },
+        // hmm
+        worldImg: {
+            // sprite: "gun-pkp-top-01.img",
+            sprite: "gun-pkm-01.img",
+            scale: { x: 0.5, y: 0.5 },
+            tint: 0xffffff,
+            leftHandOffset: { x: 12.5, y: 0 },
+            recoil: 1.33,
+            // magImg: {
+            //     sprite: "gun-pkp-bot-01.img",
+            //     pos: { x: 0, y: -17.5 },
+            // },
+        },
+        // no clue
+        particle: {
+            shellScale: 1,
+            shellOffset: 0.5875,
+            shellReverse: true,
+        },
+        // no clue
+        sound: {
+            shoot: "pkp_01",
+            reload: "pkp_reload_01",
+            pickup: "gun_pickup_01",
+            empty: "empty_fire_02",
+            deploy: "pkp_switch_01",
+        },
+    },
 };

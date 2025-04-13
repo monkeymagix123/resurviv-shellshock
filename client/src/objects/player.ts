@@ -135,9 +135,10 @@ class Gun {
         //     // console.log(imgDef.sprite);
         //     this.gunBarrel.texture = PIXI.Texture.from("../../public/img/guns/gun-m134-01 old.img.png");
         // }
+        let magpart = imgDef.magImg? "top-" : "";
         newGuns.forEach((newgun) => {
             if (imgDef.sprite.includes(newgun)) {
-                this.gunBarrel.texture = PIXI.Texture.from(`../../public/img/guns/gun-${newgun}-01.img.png`); 
+                this.gunBarrel.texture = PIXI.Texture.from(`../../public/img/guns/gun-${newgun}-${magpart}01.img.png`); 
             }
         });
         this.gunBarrel.anchor.set(0.5, 1);
@@ -149,6 +150,11 @@ class Gun {
         if (imgDef.magImg) {
             const magDef = imgDef.magImg;
             this.gunMag.texture = PIXI.Texture.from(magDef.sprite);
+            newGuns.forEach((newgun) => {
+                if (magDef.sprite.includes(newgun)) {
+                    this.gunMag.texture = PIXI.Texture.from(`../../public/img/guns/gun-${newgun}-bot-01.img.png`); 
+                }
+            });
             this.gunMag.anchor.set(0.5, 0.5);
             this.gunMag.position.set(magDef.pos.x / t, magDef.pos.y / t);
             this.gunMag.scale.set(0.25 / t, 0.25 / t);

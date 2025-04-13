@@ -27,6 +27,8 @@ import type { Obstacle } from "../objects/obstacle";
 import type { Player, PlayerBarn } from "../objects/player";
 import type { Localization } from "./localization";
 
+import { newGuns } from "../../../shared/newGuns";
+
 const maxKillFeedLines = 6;
 const touchHoldDuration = 0.75 * 1000;
 const perkUiCount = 3;
@@ -1162,9 +1164,14 @@ export class UiManager2 {
                 R.type.innerHTML = q;
                 R.image.src = helpers.getSvgFromGameType(L.type);
                 // new guns
-                if (L.type.includes("m134")) {
-                    R.image.src = "img/loot/loot-weapon-m134.png";
-                }
+                // if (L.type.includes("m134")) {
+                //     R.image.src = "img/loot/loot-weapon-m134.png";
+                // }
+                newGuns.forEach((newgun) => {
+                    if (L.type.includes(newgun)) {
+                        R.image.src = `img/loot/loot-weapon-${newgun}.png`; 
+                    }
+                });
                 R.image.style.display = j ? "inline" : "none";
                 R.image.style.transform = F;
             }

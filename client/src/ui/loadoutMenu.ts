@@ -20,6 +20,8 @@ import type { Localization } from "./localization";
 import { MenuModal } from "./menuModal";
 import type { LoadoutDisplay } from "./opponentDisplay";
 
+import { newGuns } from "../../../shared/newGuns";
+
 function emoteSlotToDomElem(e: Exclude<EmoteSlot, EmoteSlot.Count>) {
     const emoteSlotToDomId = {
         [EmoteSlot.Top]: "customize-emote-top",
@@ -686,9 +688,12 @@ export class LoadoutMenu {
                 category: objDef.type,
             };
             let svg = helpers.getSvgFromGameType(currentNewItem.type);
-            if (currentNewItem.type.includes("m134")) {
-                svg = "img/loot/loot-weapon-m134.png"; 
-            }
+            newGuns.forEach((newgun) => {
+                if (currentNewItem.type.includes(newgun)) {
+                    svg = `img/loot/loot-weapon-${newgun}.png`; 
+                }
+            });
+            
             const imageUrl = `url(${svg})`;
             const transform = helpers.getCssTransformFromGameType(currentNewItem.type);
             setTimeout(() => {
@@ -1144,9 +1149,11 @@ export class LoadoutMenu {
             });
 
             let svg = helpers.getSvgFromGameType(item.type);
-            if (item.type.includes("m134")) {
-                svg = "img/loot/loot-weapon-m134.png"; 
-            }
+            newGuns.forEach((newgun) => {
+                if (item.type.includes(newgun)) {
+                    svg = `img/loot/loot-weapon-${newgun}.png`; 
+                }
+            });
             const transform = helpers.getCssTransformFromGameType(item.type);
             const innerDiv = $("<div/>", {
                 class: "customize-item-image",

@@ -482,28 +482,6 @@
             "h": 188
           }
         },
-
-        "gun-m134-01.img": {
-          "frame": {
-            "x": 629,
-            "y": 508,
-            "w": 36,
-            "h": 194
-          },
-          "rotated": false,
-          "trimmed": true,
-          "spriteSourceSize": {
-            "x": 13,
-            "y": 39,
-            "w": 36,
-            "h": 194
-          },
-          "sourceSize": {
-            "w": 56,
-            "h": 232
-          }
-        },
-
         "part-shell-03.img": {
           "frame": {
             "x": 85,

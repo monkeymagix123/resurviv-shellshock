@@ -792,4 +792,57 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             deploy: "frag_deploy_01",
         },
     },
+
+    // 40mm
+    bullet_m79: {
+        name: "40mm",
+        type: "throwable",
+        quality: 0,
+        explosionType: "explosion_potato_cannonball",
+        inventoryOrder: 0,
+        cookable: true,
+        forceMaxThrowDistance: true,
+        explodeOnImpact: true,
+        destroyNonCollidables: true,
+        playerCollision: true,
+        fuseTime: 999,
+        aimDistance: 32,
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0,
+            velZ: 3,
+            // speed: 65,
+            speed: 25, // ???
+            spinVel: 5 * Math.PI,
+            spinDrag: 1,
+            fixedCollisionHeight: 0.25,
+        },
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-potato.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            sprite: "proj-potato-02.img",
+            scale: 0.2,
+            tint: 0xffffff,
+        },
+        handImg: {},
+        useThrowParticles: false,
+        sound: {
+            pullPin: "",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+        trail: {
+            maxLength: 25,
+            width: 2.8,
+            alpha: 1,
+            tint: 5916214,
+        },
+    },
 };

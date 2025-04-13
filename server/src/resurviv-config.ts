@@ -12,11 +12,13 @@ const serverDataConfig = {
     na: {
         gameServer: {
             apiServerUrl: "https://sus1.tailf587b3.ts.net/",
+            // apiServerUrl: "http://localhost:3000/",
         },
         regions: {
             na: {
                 https: true,
                 address: "sus2.tailf587b3.ts.net",
+                // address: "localhost:8001",
                 l10n: "index-north-america",
             },
             // eu: {

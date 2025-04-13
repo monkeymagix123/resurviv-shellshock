@@ -21,6 +21,7 @@ import type { Emitter, ParticleBarn } from "./particles";
 import type { AbstractObject, Player } from "./player";
 
 import { newGuns } from "../../../shared/newGuns";
+import { CustomConfig } from "../../../server/src/resurviv-config";
 
 export class Loot implements AbstractObject {
     __id!: number;
@@ -116,7 +117,9 @@ export class Loot implements AbstractObject {
             this.sprite.tint = itemDef.lootImg?.tint;
             newGuns.forEach((newgun) => {
                 if (itemDef.lootImg?.sprite.includes(newgun)) {
-                    this.sprite.texture = PIXI.Texture.from(`../../public/img/loot/loot-weapon-${newgun}.png`);
+                    // this.sprite.texture = PIXI.Texture.from(`../../public/img/loot/loot-weapon-${newgun}.png`);
+                    // if (CustomConfig.thisRegion != "local")
+                    this.sprite.texture = PIXI.Texture.from(`/img/loot/loot-weapon-${newgun}.png`);
                     if (newgun === "m134")
                         this.sprite.scale.set(0.037);
                     else

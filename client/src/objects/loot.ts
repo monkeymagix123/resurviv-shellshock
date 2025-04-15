@@ -122,7 +122,7 @@ export class Loot implements AbstractObject {
                     this.sprite.texture = PIXI.Texture.from(`/img/loot/loot-weapon-${newgun}.png`);
                     if (newgun === "m134")
                         this.sprite.scale.set(0.037);
-                    else
+                    else if (newgun === "pkm")
                         this.sprite.scale.set(0.14);
                     // this.sprite.scale.set(0.1);
                 }

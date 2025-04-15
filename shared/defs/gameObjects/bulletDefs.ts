@@ -811,7 +811,8 @@ export const BaseDefs: Record<string, BulletDef> = {
     bullet_m134: {
         type: "bullet",
         damage: 10,
-        obstacleDamage: 50,
+        // obstacleDamage: 50,
+        obstacleDamage: 5,
         falloff: 0.5,
         distance: 200,
         speed: 130,
@@ -824,7 +825,8 @@ export const BaseDefs: Record<string, BulletDef> = {
     bullet_pkm: {
         type: "bullet",
         damage: 15,
-        obstacleDamage: 30,
+        // obstacleDamage: 30,
+        obstacleDamage: 2,
         falloff: 0.9,
         distance: 200,
         speed: 130,

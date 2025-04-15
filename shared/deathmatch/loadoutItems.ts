@@ -72,4 +72,5 @@ export const allowedGuns = [
     "m134",
     "pkm",
     // "potato_cannon",
+    "snow_cannon",
 ];

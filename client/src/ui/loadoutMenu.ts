@@ -21,6 +21,7 @@ import { MenuModal } from "./menuModal";
 import type { LoadoutDisplay } from "./opponentDisplay";
 
 import { newGuns } from "../../../shared/newGuns";
+import { GunDefs } from "../../../shared/defs/gameObjects/gunDefs";
 
 function emoteSlotToDomElem(e: Exclude<EmoteSlot, EmoteSlot.Count>) {
     const emoteSlotToDomId = {
@@ -690,7 +691,8 @@ export class LoadoutMenu {
             let svg = helpers.getSvgFromGameType(currentNewItem.type);
             newGuns.forEach((newgun) => {
                 if (currentNewItem.type.includes(newgun)) {
-                    svg = `img/loot/loot-weapon-${newgun}.png`; 
+                    // svg = `img/loot/loot-weapon-${newgun}.png`; 
+                    svg = `img/loot/${GunDefs[newgun].lootImg.sprite}`;
                 }
             });
             
@@ -1151,7 +1153,8 @@ export class LoadoutMenu {
             let svg = helpers.getSvgFromGameType(item.type);
             newGuns.forEach((newgun) => {
                 if (item.type.includes(newgun)) {
-                    svg = `img/loot/loot-weapon-${newgun}.png`; 
+                    // svg = `img/loot/loot-weapon-${newgun}.png`; 
+                    svg = `img/loot/${GunDefs[newgun].lootImg.sprite}`;
                 }
             });
             const transform = helpers.getCssTransformFromGameType(item.type);

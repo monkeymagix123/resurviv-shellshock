@@ -3379,7 +3379,7 @@ export const GunDefs: Record<string, GunDef> = {
         headshotMult: 1.5,
         speed: { equip: -3, attack: -6 }, // i think
         lootImg: {
-            sprite: "loot-weapon-m134.img.png", // obv wrong
+            sprite: "loot-weapon-m134.png", // obv wrong
             tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
@@ -3438,7 +3438,7 @@ export const GunDefs: Record<string, GunDef> = {
         headshotMult: 2,
         speed: { equip: 0, attack: -5 }, // i think
         lootImg: {
-            sprite: "loot-weapon-pkm.img.png", // obv wrong
+            sprite: "loot-weapon-pkm.png", // obv wrong
             tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,
@@ -3505,7 +3505,7 @@ export const GunDefs: Record<string, GunDef> = {
         headshotMult: 1,
         speed: { equip: 0, attack: 0 },
         lootImg: {
-            sprite: "loot-weapon-m79.img.png",
+            sprite: "loot-weapon-m79.png",
             tint: 65280,
             border: "loot-circle-outer-01.img",
             borderTint: 0,

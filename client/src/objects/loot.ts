@@ -119,7 +119,9 @@ export class Loot implements AbstractObject {
                 if (itemDef.lootImg?.sprite.includes(newgun)) {
                     // this.sprite.texture = PIXI.Texture.from(`../../public/img/loot/loot-weapon-${newgun}.png`);
                     // if (CustomConfig.thisRegion != "local")
-                    this.sprite.texture = PIXI.Texture.from(`/img/loot/loot-weapon-${newgun}.png`);
+                    // this.sprite.texture = PIXI.Texture.from(`/img/loot/loot-weapon-${newgun}.png`);
+                    let lootImg = itemDef.lootImg.sprite;
+                    this.sprite.texture = PIXI.Texture.from(`/img/loot/${lootImg}`);
                     if (newgun === "m134")
                         this.sprite.scale.set(0.037);
                     else if (newgun === "pkm")

@@ -3479,6 +3479,7 @@ export const GunDefs: Record<string, GunDef> = {
         fireMode: "single",
         caseTiming: "shoot",
         isLauncher: true,
+        noPotatoSwap: true,
         // ammo: "potato_ammo",
         // ammo: "762mm", // not right
         ammo: "40mm",
@@ -3498,7 +3499,8 @@ export const GunDefs: Record<string, GunDef> = {
         shotSpread: 1, // done
         bulletCount: 1,
         bulletType: "bullet_potato", // just invisible
-        projType: "potato_cannonball", // ???
+        // projType: "potato_cannonball", // ???
+        projType: "bullet_m79",
         noSplinter: true,
         headshotMult: 1,
         speed: { equip: 0, attack: 0 },

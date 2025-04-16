@@ -125,6 +125,8 @@ export class Loot implements AbstractObject {
                     else if (newgun === "pkm")
                         this.sprite.scale.set(0.14);
                     // this.sprite.scale.set(0.1);
+                    else if (newgun === "m79")
+                        this.sprite.scale.set(0.09);
                 }
             });
             this.container.texture = itemDef.lootImg.border

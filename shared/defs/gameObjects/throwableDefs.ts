@@ -798,7 +798,7 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         name: "40mm",
         type: "throwable",
         quality: 0,
-        explosionType: "explosion_potato_cannonball",
+        explosionType: "explosion_frag", // similar stats on wiki?
         inventoryOrder: 0,
         cookable: true,
         forceMaxThrowDistance: true,
@@ -807,13 +807,15 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         playerCollision: true,
         fuseTime: 999,
         aimDistance: 32,
+        // aimDistance: 300, // ???
         rad: 1,
         throwPhysics: {
             playerVelMult: 0,
             velZ: 3,
             // speed: 65,
-            speed: 25, // ???
-            spinVel: 5 * Math.PI,
+            // speed: 25, // ???
+            speed: 35,
+            spinVel: 10 * Math.PI, // wiki trivia?
             spinDrag: 1,
             fixedCollisionHeight: 0.25,
         },

@@ -107,7 +107,7 @@ export const DeatchmatchMain: MapDef = util.mergeDeep(structuredClone(Main), {
 });
 
 DeatchmatchMain["lootTable"] = {
-    // tier_world: [{ name: "m134", count: 1, weight: 1}, {name: "pkm", count: 1, weight: 1}],
+    // tier_world: [{ name: "m134", count: 1, weight: 1}, {name: "pkm", count: 1, weight: 1}, {name: "m79", count: 1, weight: 1}],
 
     tier_mansion_floor: [{ name: "outfitCasanova", count: 1, weight: 1 }],
     tier_vault_floor: [{ name: "outfitJester", count: 1, weight: 1 }],

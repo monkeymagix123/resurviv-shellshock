@@ -813,8 +813,8 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             playerVelMult: 0,
             velZ: 3,
             // speed: 65,
-            // speed: 25, // ???
-            speed: 35,
+            speed: 30, // aaron da goat
+            // speed: 35,
             spinVel: 10 * Math.PI, // wiki trivia?
             spinDrag: 1,
             fixedCollisionHeight: 0.25,
@@ -828,7 +828,8 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             scale: 0.2,
         },
         worldImg: {
-            sprite: "proj-potato-02.img",
+            // sprite: "proj-potato-02.img",
+            sprite: "proj-shell-40mm.png",
             scale: 0.2,
             tint: 0xffffff,
         },

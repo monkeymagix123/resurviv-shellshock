@@ -138,6 +138,12 @@ class Projectile implements AbstractObject {
                 sprite = halloweenSpriteMap[sprite] || sprite;
             }
             this.sprite.texture = PIXI.Texture.from(sprite);
+            if (sprite.includes("40mm")) {
+                this.sprite.texture = PIXI.Texture.from("/img/proj/proj-shell-40mm.png");
+                // this.sprite.scale.set(10);
+                // this.sprite.scale.set(0.2);
+                this.imgScale *= 0.1;
+            }
             this.sprite.tint = imgDef.tint;
             this.sprite.alpha = 1;
 

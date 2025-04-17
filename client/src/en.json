@@ -705,5 +705,8 @@
   "game-m134": "M134",
   "game-pkm": "PKM",
   "game-m79": "M79",
-  "game-snow_cannon": "Snow Cannon"
+  "game-snow_cannon": "Snow Cannon",
+
+  "game-hud-m79": "M79",
+  "game-bullet_m79": "M79"
 }

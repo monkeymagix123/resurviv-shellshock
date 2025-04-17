@@ -3442,7 +3442,8 @@ export class Player extends BaseGameObject {
 
     dropItem(dropMsg: net.DropItemMsg): void {
         const itemDef = GameObjectDefs[dropMsg.item] as LootDef;
-        const disableDropping = true;
+        // const disableDropping = true;
+        const disableDropping = false;
         switch (itemDef.type) {
             case "gun":
             case "melee": {

@@ -2374,7 +2374,7 @@ export class Player extends BaseGameObject {
             const def = GameObjectDefs[weap.type];
             switch (def.type) {
                 case "gun":
-                    this.weaponManager.dropGun(i);
+                    // this.weaponManager.dropGun(i);
                     weap.type = "";
                     break;
                 case "melee":

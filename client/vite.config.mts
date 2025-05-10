@@ -107,7 +107,7 @@ export default defineConfig(({ mode }) => {
             stringify: true,
         },
         server: {
-            port: 3000,
+            port: 3001,
             strictPort: true,
             host: "0.0.0.0",
             proxy: {

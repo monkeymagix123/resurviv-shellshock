@@ -63,14 +63,14 @@ function sortAcquired(a: Item, b: Item) {
 }
 
 function sortAlphabetical(a: Item, b: Item) {
-    const defA = GameObjectDefs[a.type] as EmoteDef;
-    const defB = GameObjectDefs[b.type] as EmoteDef;
-    if (defA.name! < defB.name!) {
-        return -1;
-    }
-    if (defA.name! > defB.name!) {
-        return 1;
-    }
+    // const defA = GameObjectDefs[a.type] as EmoteDef;
+    // const defB = GameObjectDefs[b.type] as EmoteDef;
+    // if (defA.name! < defB.name!) {
+    //     return -1;
+    // }
+    // if (defA.name! > defB.name!) {
+    //     return 1;
+    // }
     return 0;
 }
 

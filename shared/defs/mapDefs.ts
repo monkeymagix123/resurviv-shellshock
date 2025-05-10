@@ -1,3 +1,4 @@
+import { Coop } from "../../server/src/deathmatch/maps/coop";
 import { DeatchmatchHalloween } from "../../server/src/deathmatch/maps/halloween";
 import { DeatchmatchMain } from "../../server/src/deathmatch/maps/main";
 import { DeatchmatchSnow } from "../../server/src/deathmatch/maps/snow";
@@ -33,6 +34,7 @@ export const MapDefs = {
     savannah: Savannah,
     cobalt: Cobalt,
     turkey: Turkey,
+    coop: Coop,
 } satisfies Record<string, MapDef>;
 
 export type Atlas = "gradient" | "loadout" | "shared" | "main";

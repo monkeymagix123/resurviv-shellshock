@@ -51,7 +51,7 @@ export const CustomConfig: DeepPartial<ConfigType> = {
     },
     modes: [
         {
-            mapName: "main",
+            mapName: "coop",
             teamMode: 1,
             enabled: true,
         },

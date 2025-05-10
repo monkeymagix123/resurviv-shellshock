@@ -84,4 +84,5 @@ export const allowedGuns = [
     "vector",
     "mosin",
     "famas",
+    "m1911_dual",
 ];

@@ -70,12 +70,12 @@ export const DeatchmatchMain: MapDef = util.mergeDeep(structuredClone(Main), {
                 // barn_01: { small: 1, large: 3 },
                 // barn_02: 1,
                 hut_01: 2,
-                hut_02: 1, // spas hut
-                hut_03: 1, // scout hut
+                // hut_02: 1, // spas hut
+                // hut_03: 1, // scout hut
                 greenhouse_01: 1,
-                cache_01: 1,
-                cache_02: { odds: 0.8 }, // mosin tree
-                cache_07: 1,
+                // cache_01: 1,
+                // cache_02: { odds: 0.8 }, // mosin tree
+                // cache_07: 1,
                 // bunker_structure_01: { odds: 0.05 },
                 bunker_structure_02: config.mapSize === "large" ? 1 : 0,
                 // bunker_structure_03: 1,

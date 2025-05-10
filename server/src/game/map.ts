@@ -285,6 +285,8 @@ export class GameMap {
     potatoMode: boolean;
     sniperMode: boolean;
 
+    coopMode: boolean;
+
     factionModeSplitOri: 0 | 1 | 2 | 3 = 0;
 
     lakes: Array<{
@@ -334,6 +336,8 @@ export class GameMap {
         this.desertMode = !!this.mapDef.gameMode.desertMode;
         this.potatoMode = !!this.mapDef.gameMode.potatoMode;
         this.sniperMode = !!this.mapDef.gameMode.sniperMode;
+
+        this.coopMode = !!this.mapDef.gameMode.coopMode;
 
         if (this.factionMode) {
             this.factionModeSplitOri = util.randomInt(0, 3) as 0 | 1 | 2 | 3;

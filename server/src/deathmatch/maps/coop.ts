@@ -18,5 +18,6 @@ let mapDef = structuredClone(DeatchmatchMain);
 mapDef.gameMode.maxPlayers = 100;
 mapDef.gameMode.factionMode = true;
 mapDef.gameMode.factions = 2;
+mapDef.gameMode.coopMode = true;
 
 export const Coop = mapDef;

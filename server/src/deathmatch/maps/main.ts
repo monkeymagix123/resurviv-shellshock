@@ -4,7 +4,8 @@ import { GameConfig } from "../../../../shared/gameConfig";
 import { util } from "../../../../shared/utils/util";
 import { THIS_REGION } from "../../resurviv-config";
 
-const switchToSmallMap = THIS_REGION === "eu";
+// const switchToSmallMap = THIS_REGION === "eu";
+const switchToSmallMap = true;
 
 const config = {
     mapSize: switchToSmallMap ? "small" : "large",
@@ -27,7 +28,7 @@ if (Main.mapGen) {
         },
         [] as Record<string, number>[],
     );
-    a[0]["crate_05"] ||= 700;
+    a[0]["crate_05"] ||= 225;
 }
 
 export const DeatchmatchMain: MapDef = util.mergeDeep(structuredClone(Main), {

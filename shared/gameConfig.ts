@@ -174,16 +174,16 @@ export const GameConfig = {
         removeOnDisconnect: true,
         defaultItems: {
             weapons: [
-                { type: "spas12", ammo: 9 },
+                { type: "ak47", ammo: 30 },
                 { type: "mosin", ammo: 5 },
                 { type: "fists", ammo: 0 },
                 { type: "", ammo: 0 },
             ],
             outfit: "outfitBase",
             backpack: "backpack03",
-            helmet: "helmet03",
-            chest: "chest03",
-            scope: "4xscope",
+            helmet: "",
+            chest: "chest01",
+            scope: "8xscope",
             perks: [
                 {
                     type: "endless_ammo",
@@ -217,7 +217,7 @@ export const GameConfig = {
                 "1xscope": 1,
                 "2xscope": 1,
                 "4xscope": 1,
-                "8xscope": 0,
+                "8xscope": 1,
                 "15xscope": 0,
             } as Record<string, number>,
         },

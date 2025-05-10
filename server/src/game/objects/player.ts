@@ -3824,6 +3824,8 @@ export class Player extends BaseGameObject {
         ) {
             this.speed *= 0.5;
         }
+
+        this.speed *= 1.5;
     }
 
     sendMsg(type: number, msg: net.AbstractMsg, bytes = 128): void {

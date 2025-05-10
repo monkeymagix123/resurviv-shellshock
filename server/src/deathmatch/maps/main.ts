@@ -13,6 +13,23 @@ const config = {
     spawnDensity: { large: 44, small: 37 },
 } as const;
 
+let a;
+if (Main.mapGen) {
+    a = Main.mapGen.densitySpawns.reduce(
+        (array, item) => {
+            let object: Record<string, number> = {};
+            for (const [key, value] of Object.entries(item)) {
+                object[key] =
+                    (value * config.spawnDensity[config.mapSize]) / 100;
+            }
+            array.push(object);
+            return array;
+        },
+        [] as Record<string, number>[],
+    );
+    a[0]["crate_05"] ||= 700;
+}
+
 export const DeatchmatchMain: MapDef = util.mergeDeep(structuredClone(Main), {
     biome: {
         particles: { camera: "falling_leaf_spring" },
@@ -47,18 +64,19 @@ export const DeatchmatchMain: MapDef = util.mergeDeep(structuredClone(Main), {
                   })
             : {},
         densitySpawns: Main.mapGen
-            ? Main.mapGen.densitySpawns.reduce(
-                  (array, item) => {
-                      let object: Record<string, number> = {};
-                      for (const [key, value] of Object.entries(item)) {
-                          object[key] =
-                              (value * config.spawnDensity[config.mapSize]) / 100;
-                      }
-                      array.push(object);
-                      return array;
-                  },
-                  [] as Record<string, number>[],
-              )
+            // ? Main.mapGen.densitySpawns.reduce(
+            //       (array, item) => {
+            //           let object: Record<string, number> = {};
+            //           for (const [key, value] of Object.entries(item)) {
+            //               object[key] =
+            //                   (value * config.spawnDensity[config.mapSize]) / 100;
+            //           }
+            //           array.push(object);
+            //           return array;
+            //       },
+            //       [] as Record<string, number>[],
+            //   )
+            ? a
             : {},
         fixedSpawns: [
             {

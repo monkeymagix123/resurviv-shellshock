@@ -20,4 +20,6 @@ mapDef.gameMode.factionMode = true;
 mapDef.gameMode.factions = 2;
 mapDef.gameMode.coopMode = true;
 
+mapDef.mapGen.fixedSpawns[0]["zone"] = 2;
+
 export const Coop = mapDef;

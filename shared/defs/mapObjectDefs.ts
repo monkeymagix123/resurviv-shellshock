@@ -451,6 +451,43 @@ function createBush<T extends ObstacleDef>(e: Partial<T>): T {
     };
     return util.mergeDeep(t, e || {});
 }
+function createZone<T extends ObstacleDef>(e: Partial<T>): T {
+    const t = {
+        type: "obstacle",
+        scale: { createMin: 1.05, createMax: 1.2, destroy: 1 },
+        // collision: collider.createCircle(v2.create(0, 0), 30),
+        collision: collider.createAabb(v2.create(-15,-15), v2.create(15, 15)),
+        height: 0,
+        collidable: false,
+        destructible: false,
+        health: 100,
+        hitParticle: "leaf",
+        explodeParticle: "leaf",
+        reflectBullets: false,
+        // isBush: true,
+        loot: [],
+        map: { display: true, color: 0x808080, scale: 1.5 },
+        terrain: { grass: true, beach: false },
+        img: {
+            sprite: "loot-ammo-box.img",
+            // sprite: "map-brush-01sv.img",
+            residue: "",
+            scale: 5,
+            alpha: 0.97,
+            // tint: 0xffffff,
+            // // tint: 0x555555,
+            tint: 0x808080,
+            zIdx: 0,
+        },
+        sound: {
+            bullet: "bush_bullet",
+            punch: "bush_bullet",
+            explode: "bush_break_01",
+            enter: "bush_enter_01",
+        },
+    };
+    return util.mergeDeep(t, e || {});
+}
 function createCache<T extends BuildingDef>(e: Partial<T>): T {
     const t = {
         type: "building",
@@ -29293,4 +29330,5 @@ export const MapObjectDefs: Record<string, MapObjectDef> = {
             zIdx: 4,
         },
     },
+    zone: createZone({}),
 };

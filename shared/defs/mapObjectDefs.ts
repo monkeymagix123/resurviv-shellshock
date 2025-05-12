@@ -29331,9 +29331,17 @@ export const MapObjectDefs: Record<string, MapObjectDef> = {
             zIdx: 4,
         },
     },
+    // default
     zone: createZone({}),
+    // red capturing
     zone_red: createZone({}, 0x8b0000),
+    // zone_red_inactive: createZone({}, 0x884444),
+    zone_red_inactive: createZone({}, 0x8b2323),
+    // blue capturing
     zone_blue: createZone({}, 0x00008B),
+    // zone_blue_inactive: createZone({}, 0x46468b),
+    zone_blue_inactive: createZone({}, 0x23238b),
+    // contested
     // zone_purple: createZone({}, 0x301934),
     zone_purple: createZone({}, 0x800080),
 };

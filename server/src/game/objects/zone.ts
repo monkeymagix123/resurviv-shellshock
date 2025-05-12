@@ -8,6 +8,8 @@ import { Player } from "./player";
 import { AABB, coldet } from "../../../../shared/utils/coldet";
 import { Collider } from "../../../../shared/utils/coldet";
 
+import { coopConfig } from "../../../../shared/coopConfig";
+
 export class Zone extends Obstacle {
     // last in zone
     zone!: {
@@ -29,7 +31,12 @@ export class Zone extends Obstacle {
         }
     }
 
-    getColor(red: boolean, blue: boolean): string {
+    private inactiveEnd(b: boolean) {
+        if (b) return "";
+        return "_inactive";
+    }
+
+    getColor(red: boolean = this.zone.red, blue: boolean = this.zone.blue): string {
         if (red && blue) {
             // contested
             return "_purple";
@@ -38,10 +45,10 @@ export class Zone extends Obstacle {
 
         // hmm maybe diff colors for red inactive and active
         if (red || this.capturing === TeamColor.Red) {
-            return "_red";
+            return `_red${this.inactiveEnd(red)}`;
         }
         if (blue || this.capturing === TeamColor.Blue) {
-            return "_blue";
+            return `_blue${this.inactiveEnd(blue)}`;
         }
 
         // return "_gray";
@@ -85,7 +92,7 @@ export class Zone extends Obstacle {
         // this.game.netSync();
 
         let a: Zone;
-        if (red != this.zone.red || blue != this.zone.blue) {
+        if (this.getColor() != this.getColor(red, blue)) {
             // update
             this.dead = true;
             this.setDirty();

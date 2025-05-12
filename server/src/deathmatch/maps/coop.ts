@@ -11,6 +11,7 @@ mapDef.gameMode.factionMode = true;
 mapDef.gameMode.factions = 2;
 mapDef.gameMode.coopMode = true;
 
-mapDef.mapGen.fixedSpawns[0]["zone"] = 2;
+// 1 coop at the moment
+mapDef.mapGen.fixedSpawns[0]["zone"] = 1;
 
 export const Coop = mapDef;

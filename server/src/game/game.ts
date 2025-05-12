@@ -20,6 +20,7 @@ import { PlaneBarn } from "./objects/plane";
 import { PlayerBarn } from "./objects/player";
 import { ProjectileBarn } from "./objects/projectile";
 import { SmokeBarn } from "./objects/smoke";
+import { Zone } from "./objects/zone";
 import { PluginManager } from "./pluginManager";
 
 export interface GroupData {
@@ -48,6 +49,9 @@ export class Game {
     config: ServerGameConfig;
     pluginManager = new PluginManager(this);
     modeManager: GameModeManager;
+
+    zones: Zone[] = [];
+    curZone: Zone;
 
     grid: Grid<GameObject>;
     objectRegister: ObjectRegister;
@@ -122,6 +126,8 @@ export class Game {
                 this.playerBarn.addTeam(i);
             }
         }
+
+        this.curZone = this.zones[0];
     }
 
     async init() {
@@ -178,6 +184,11 @@ export class Game {
                 this.tickTimes = [];
             }
         }
+
+        if (!this.curZone) {
+            this.curZone = this.zones[0];
+        }
+        this.curZone?.update(dt);
     }
 
     netSync() {

@@ -24,6 +24,7 @@ import { Building } from "./objects/building";
 import { Obstacle } from "./objects/obstacle";
 import type { Player } from "./objects/player";
 import { Structure } from "./objects/structure";
+import { Zone } from "./objects/zone";
 import type { Team } from "./team";
 
 //
@@ -1333,16 +1334,31 @@ export class GameMap {
 
         scale = scale ?? util.random(def.scale.createMin, def.scale.createMax);
 
-        const obstacle = new Obstacle(
-            this.game,
-            pos,
-            type,
-            layer,
-            ori,
-            scale,
-            buildingId,
-            puzzlePiece,
-        );
+        let obstacle;
+        if (!type.includes("zone")) {
+            obstacle = new Obstacle(
+                this.game,
+                pos,
+                type,
+                layer,
+                ori,
+                scale,
+                buildingId,
+                puzzlePiece,
+            );
+        } else {
+            obstacle = new Zone(
+                this.game,
+                pos,
+                type,
+                layer,
+                ori,
+                scale,
+                buildingId,
+                puzzlePiece,
+            );
+            this.game.zones.push(obstacle);
+        }
         this.game.objectRegister.register(obstacle);
         this.obstacles.push(obstacle);
 

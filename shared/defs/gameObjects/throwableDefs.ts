@@ -866,9 +866,9 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
         rad: 1,
         throwPhysics: {
             playerVelMult: 0,
-            velZ: 3,
+            velZ: 6,
             // speed: 65,
-            speed: 30 * 2, // aaron da goat
+            speed: 50, // aaron da goat
             // speed: 35,
             spinVel: 10 * Math.PI, // wiki trivia?
             spinDrag: 1,

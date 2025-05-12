@@ -848,4 +848,59 @@ export const ThrowableDefs: Record<string, ThrowableDef> = {
             tint: 5916214,
         },
     },
+
+    bullet_rpg: {
+        name: "40mm",
+        type: "throwable",
+        quality: 0,
+        explosionType: "explosion_frag", // similar stats on wiki?
+        inventoryOrder: 0,
+        cookable: true,
+        forceMaxThrowDistance: true,
+        explodeOnImpact: true,
+        destroyNonCollidables: true,
+        playerCollision: true,
+        fuseTime: 999,
+        aimDistance: 32,
+        // aimDistance: 300, // ???
+        rad: 1,
+        throwPhysics: {
+            playerVelMult: 0,
+            velZ: 3,
+            // speed: 65,
+            speed: 30 * 2, // aaron da goat
+            // speed: 35,
+            spinVel: 10 * Math.PI, // wiki trivia?
+            spinDrag: 1,
+            fixedCollisionHeight: 0.25,
+        },
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-throwable-potato.img",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        worldImg: {
+            // sprite: "proj-potato-02.img",
+            sprite: "proj-shell-40mm.png",
+            scale: 0.2,
+            tint: 0xffffff,
+        },
+        handImg: {},
+        useThrowParticles: false,
+        sound: {
+            pullPin: "",
+            throwing: "frag_throw_01",
+            pickup: "frag_pickup_01",
+            deploy: "frag_deploy_01",
+        },
+        trail: {
+            maxLength: 25,
+            width: 2.8,
+            alpha: 1,
+            tint: 5916214,
+        },
+    },
 };

@@ -80,7 +80,8 @@ export const allowedGuns = [
     "ak47",
     "mp220",
     "svd", // or mk 20 ssr
-    "m79",
+    // "m79",
+    "rpg",
     "vector",
     "mosin",
     "famas",

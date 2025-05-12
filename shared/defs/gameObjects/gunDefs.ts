@@ -3597,4 +3597,66 @@ export const GunDefs: Record<string, GunDef> = {
             deploy: "potato_smg_switch_01",
         },
     },
+
+    rpg: {
+        name: "RPG",
+        type: "gun",
+        quality: 1,
+        fireMode: "single",
+        caseTiming: "shoot",
+        isLauncher: true,
+        noPotatoSwap: true,
+        // ammo: "potato_ammo",
+        // ammo: "762mm", // not right
+        ammo: "40mm",
+        ammoSpawnCount: 10,
+        maxClip: 1,
+        maxReload: 1,
+        extendedClip: 1,
+        extendedReload: 1,
+        reloadTime: 2.3,
+        fireDelay: 1.2, // unknown
+        switchDelay: 0.9,
+        barrelLength: 2,
+        barrelOffset: -1, // copied from potato cannon
+        // barrelOffset: 0, // ????
+        recoilTime: 1e10,
+        moveSpread: 3,
+        shotSpread: 1, // done
+        bulletCount: 1,
+        bulletType: "bullet_potato", // just invisible
+        // projType: "potato_cannonball", // ???
+        projType: "bullet_rpg",
+        noSplinter: true,
+        headshotMult: 1,
+        speed: { equip: 0, attack: 0 },
+        lootImg: {
+            sprite: "loot-weapon-m79.png",
+            tint: 65280,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.3,
+        },
+        worldImg: {
+            sprite: "gun-m79-01.img",
+            scale: { x: 0.5, y: 0.5 },
+            tint: 0xffffff,
+            leftHandOffset: { x: 7, y: 2 },
+            gunOffset: { x: -10, y: -4 },
+            recoil: 8,
+            handsBelow: true,
+        },
+        particle: {
+            shellScale: 1,
+            shellOffset: -1,
+            shellOffsetY: 1,
+        },
+        sound: {
+            shoot: "potato_cannon_01",
+            reload: "potato_cannon_reload_01",
+            pickup: "gun_pickup_01",
+            empty: "empty_fire_01",
+            deploy: "potato_cannon_switch_01",
+        },
+    },
 };

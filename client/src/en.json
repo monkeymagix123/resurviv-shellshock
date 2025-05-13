@@ -708,5 +708,9 @@
   "game-snow_cannon": "Snow Cannon",
 
   "game-hud-m79": "M79",
-  "game-bullet_m79": "M79"
+  "game-bullet_m79": "M79",
+
+  "game-rpg": "RPG",
+  "game-hud-rpg": "RPG",
+  "game-bullet_rpg": "RPG"
 }

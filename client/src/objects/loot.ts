@@ -117,9 +117,6 @@ export class Loot implements AbstractObject {
             this.sprite.tint = itemDef.lootImg?.tint;
             newGuns.forEach((newgun) => {
                 if (itemDef.lootImg?.sprite.includes(newgun)) {
-                    // this.sprite.texture = PIXI.Texture.from(`../../public/img/loot/loot-weapon-${newgun}.png`);
-                    // if (CustomConfig.thisRegion != "local")
-                    // this.sprite.texture = PIXI.Texture.from(`/img/loot/loot-weapon-${newgun}.png`);
                     let lootImg = itemDef.lootImg.sprite;
                     this.sprite.texture = PIXI.Texture.from(`/img/loot/${lootImg}`);
                     if (newgun === "m134")

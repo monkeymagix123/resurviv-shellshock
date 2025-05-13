@@ -28,6 +28,7 @@ import type { Player, PlayerBarn } from "../objects/player";
 import type { Localization } from "./localization";
 
 import { newGuns } from "../../../shared/newGuns";
+import { GunDefs } from "../../../shared/defs/gameObjects/gunDefs";
 
 const maxKillFeedLines = 6;
 const touchHoldDuration = 0.75 * 1000;
@@ -1168,8 +1169,9 @@ export class UiManager2 {
                 //     R.image.src = "img/loot/loot-weapon-m134.png";
                 // }
                 newGuns.forEach((newgun) => {
+                    let s = GunDefs[newgun].worldImg.sprite;
                     if (L.type.includes(newgun)) {
-                        R.image.src = `img/loot/loot-weapon-${newgun}.png`; 
+                        R.image.src = `img/loot/${s}`;
                     }
                 });
                 R.image.style.display = j ? "inline" : "none";

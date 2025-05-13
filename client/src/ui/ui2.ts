@@ -1169,7 +1169,7 @@ export class UiManager2 {
                 //     R.image.src = "img/loot/loot-weapon-m134.png";
                 // }
                 newGuns.forEach((newgun) => {
-                    let s = GunDefs[newgun].worldImg.sprite;
+                    let s = GunDefs[newgun].lootImg.sprite;
                     if (L.type.includes(newgun)) {
                         R.image.src = `img/loot/${s}`;
                     }
